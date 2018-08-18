@@ -14,7 +14,7 @@ namespace Biblioteca.Models
         public int cod_libro { get; set; }
         public int cod_usuario { get; set; }
         public DateTime FechaReserva { get; set; }
-        public DateTime FechaDevolucion { get; set; }
+        public DateTime? FechaDevolucion { get; set; }
         public int DiasPrestamo { get; set; }
 
         public virtual Libro Libro { get; set; }
