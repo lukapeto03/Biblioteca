@@ -81,15 +81,29 @@ namespace Biblioteca.Controllers
         // POST: Tickets/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        /* [HttpPost]
+         [ValidateAntiForgeryToken]
+         public ActionResult Edit([Bind(Include = "cod_ticket,cod_reserva,estado")] Ticket ticket)
+         {
+             if (ModelState.IsValid)
+             {
+                 db.Entry(ticket).State = EntityState.Modified;
+                 db.SaveChanges();
+                 return RedirectToAction("Index");
+             }
+             return View(ticket);
+         }*/
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cod_ticket,cod_reserva,estado")] Ticket ticket)
+        public ActionResult Cerrar([Bind(Include = "cod_ticket,cod_reserva,estado")] Ticket ticket)
+
         {
             if (ModelState.IsValid)
-            {
-                db.Entry(ticket).State = EntityState.Modified;
+            {                
+                ticket.estado = Estado.Cerrado;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             return View(ticket);
         }

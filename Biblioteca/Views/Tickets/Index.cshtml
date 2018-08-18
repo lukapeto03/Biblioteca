@@ -40,9 +40,18 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cod_ticket }) |
             @Html.ActionLink("Details", "Details", new { id=item.cod_ticket }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cod_ticket })
+ 
+
+       @using(Html.BeginForm()) {
+                @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Cerrar" class="btn btn-default" /> |
+        
+            </div>
+            }
+
         </td>
     </tr>
 }
