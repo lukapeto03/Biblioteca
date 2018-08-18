@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Biblioteca.Models.Ticket>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tickets</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Nombre del Libro: @Html.TextBox("busquedaTikets")<br />
+        <input type="submit" value="Buscar Ticket" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cod_ticket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cod_reserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cod_ticket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cod_reserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cod_ticket }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cod_ticket }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cod_ticket })
+        </td>
+    </tr>
+}
+
+</table>

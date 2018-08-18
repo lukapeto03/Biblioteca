@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Biblioteca.Models.Libro>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Libros</h2>
+
+<p>
+    
+    @using (Html.BeginForm())
+    {
+        <p>Nombre del Libro: @Html.TextBox("busquedalibros")<br/>
+          <input type="submit" value="Buscar Libro" />
+        </p>
+    }
+<p>
+    <br>
+@Html.ActionLink("Crear Nuevo registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Editorial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ubicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Editorial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Año)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cod_libro }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.cod_libro }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.cod_libro })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Biblioteca.Models.Reserva>
+
+@{
+    ViewBag.Title = "Reservar Libros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Libro.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDevolucion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiasPrestamo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Libro.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaReserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDevolucion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiasPrestamo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cod_reserva }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.cod_reserva }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.cod_reserva })
+        </td>
+    </tr>
+}
+
+</table>

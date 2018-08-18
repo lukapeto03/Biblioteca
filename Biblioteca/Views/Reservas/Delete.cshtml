@@ -1,0 +1,65 @@
+﻿@model Biblioteca.Models.Reserva
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Está seguro que quiere eliminar este registro?</h3>
+<div>
+    <h4>Reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaReserva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDevolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDevolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiasPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiasPrestamo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>
