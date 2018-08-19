@@ -4,9 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Xml.Serialization;
 
 namespace Biblioteca.Models
 {
+
+    [Serializable]
     public enum TipoUsuario
     {
         Normal, Reserva
@@ -22,8 +25,11 @@ namespace Biblioteca.Models
 
         public string Area { get; set; }
         public int Año { get; set; }
+        
         public TipoUsuario? Tipo { get; set; }
         public int Stock { get; set; }
+
+        [XmlIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
     public class LibroDBContext : DbContext
