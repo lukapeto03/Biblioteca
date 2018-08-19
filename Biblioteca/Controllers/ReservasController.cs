@@ -49,8 +49,8 @@ namespace Biblioteca.Controllers
         // GET: Reservas/Create
         public ActionResult Create()
         {
-            ViewBag.cod_libro = new SelectList(db.Libroes, "cod_libro", "Nombre");
-            ViewBag.cod_usuario = new SelectList(db.Usuarios, "cod_usuario", "NombreCompleto");
+            ViewBag.cod_libro = new SelectList(db.Libroes.Where(l => l.Stock > 0), "cod_libro", "Nombre");
+            ViewBag.cod_usuario = new SelectList(db.Usuarios.Where(u => u.estado == EstadoUsuario.Activo), "cod_usuario", "NombreCompleto");
             return View();
         }
 
@@ -75,12 +75,6 @@ namespace Biblioteca.Controllers
 
             reserva.FechaDevolucion = DateTime.Today;
             db.SaveChanges();
-
-            // Tomar fecha de la reserva y sumarle los días de prestamo
-            // Restar la fecha de reserva + los días a la fecha y hora actual
-            // si la fecha y hora es mayor que la máxima de entrega entonces 
-            // Obtenga el usuario y coloquelo inactivo
-            // Genere el mensaje de que el usuario está inactivo
 
             if (DateTime.Today > (reserva.FechaReserva.AddDays(reserva.DiasPrestamo)) )
             {

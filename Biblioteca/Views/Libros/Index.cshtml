@@ -12,13 +12,26 @@
     @using (Html.BeginForm())
     {
         <p>Nombre del Libro: @Html.TextBox("busquedalibros")<br/>
-          <input type="submit" value="Buscar Libro" />
+        </p>
+        <p>
+            Por Tipo: <br />
+           @Html.EnumDropDownListFor(model => model.First().Tipo, new { @class = "form-control" })
+
+        </p>
+        <p>
+            Nombre del Área: @Html.TextBox("area")<br />
+        </p>
+        <p>
+            Nombre del Autor: @Html.TextBox("autor")<br />
+            <input type="submit" value="Filtrar" />
         </p>
     }
 <p>
     <br>
 @Html.ActionLink("Crear Nuevo registro", "Create")
 </p>
+
+
 <table class="table">
     <tr>
         <th>

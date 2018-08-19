@@ -16,7 +16,7 @@
     </p>
     }
     <p>
-
+<p>@(Request.QueryString["mensaje"])</p>
 <p>
     @Html.ActionLink("Crear Nuevo registro", "Create")
 </p>
@@ -65,11 +65,7 @@
             {
                 @Html.ActionLink("Cerrar", "Cerrar", new { id = item.cod_reserva })
                
-            }
-
-            
-            
-            
+            }    
     </tr>
 }
 

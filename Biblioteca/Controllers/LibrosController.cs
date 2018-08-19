@@ -15,12 +15,24 @@ namespace Biblioteca.Controllers
         private LibroDBContext db = new LibroDBContext();
 
         // GET: Libros
-        public ActionResult Index(String busquedalibros)
+        public ActionResult Index(String busquedalibros, string tipo, string area, string autor)
         {
             var libros = from m in db.Libros select m;
             if (!string.IsNullOrEmpty(busquedalibros))
             {
                 libros = libros.Where(s => s.Nombre.Contains(busquedalibros));
+            }
+            if (!string.IsNullOrEmpty(tipo))
+            {
+                libros = libros.Where(s => s.Nombre.Contains(tipo));
+            }
+            if (!string.IsNullOrEmpty(area))
+            {
+                libros = libros.Where(s => s.Nombre.Contains(area));
+            }
+            if (!string.IsNullOrEmpty(autor))
+            {
+                libros = libros.Where(s => s.Nombre.Contains(autor));
             }
             return View(libros);
         }

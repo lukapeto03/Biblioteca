@@ -5,14 +5,14 @@ namespace Biblioteca.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Biblioteca.Models.UsuarioDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Biblioteca.Models.LibroDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Biblioteca.Models.UsuarioDBContext context)
+        protected override void Seed(Biblioteca.Models.LibroDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 
