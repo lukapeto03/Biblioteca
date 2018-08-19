@@ -59,6 +59,10 @@ namespace Biblioteca.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (db.Usuarios.Where(u => u.Cedula == usuario.Cedula).Count() > 0)
+                {
+                    return RedirectToAction("Create", new { mensaje = "La cédula ya se encuentra registrada"});
+                }
                 db.Usuarios.Add(usuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");

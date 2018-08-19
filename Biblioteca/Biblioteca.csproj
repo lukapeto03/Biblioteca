@@ -197,9 +197,9 @@
     <Compile Include="Migrations\201808190451406_estadoNotNull.Designer.cs">
       <DependentUpon>201808190451406_estadoNotNull.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808190622276_libroCambios.cs" />
-    <Compile Include="Migrations\201808190622276_libroCambios.Designer.cs">
-      <DependentUpon>201808190622276_libroCambios.cs</DependentUpon>
+    <Compile Include="Migrations\201808191637271_areaLibro.cs" />
+    <Compile Include="Migrations\201808191637271_areaLibro.Designer.cs">
+      <DependentUpon>201808191637271_areaLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -315,8 +315,8 @@
     <EmbeddedResource Include="Migrations\201808190451406_estadoNotNull.resx">
       <DependentUpon>201808190451406_estadoNotNull.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808190622276_libroCambios.resx">
-      <DependentUpon>201808190622276_libroCambios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808191637271_areaLibro.resx">
+      <DependentUpon>201808191637271_areaLibro.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,8 @@ namespace Biblioteca.Models
     {
         [Key]
         public int cod_usuario { get; set; }
+
+        [Index(IsUnique = true)]
         public int Cedula { get; set; }
         public string NombreCompleto { get; set; }
         public string Direccion { get; set; }

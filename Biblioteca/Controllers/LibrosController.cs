@@ -30,7 +30,7 @@ namespace Biblioteca.Controllers
             }
             if (!string.IsNullOrEmpty(area))
             {
-                libros = libros.Where(s => s.Nombre.Contains(area));
+                libros = libros.Where(s => s.Area.Contains(area));
             }
             if (!string.IsNullOrEmpty(autor))
             {

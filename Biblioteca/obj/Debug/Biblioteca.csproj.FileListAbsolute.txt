@@ -91,4 +91,5 @@ C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\ob
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.estadoUsuario.resources
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.defaultEstado.resources
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.estadoNotNull.resources
-C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.libroCambios.resources
+C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.areaLibro.resources

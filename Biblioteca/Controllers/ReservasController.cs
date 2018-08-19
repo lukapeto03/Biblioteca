@@ -48,8 +48,10 @@ namespace Biblioteca.Controllers
 
         // GET: Reservas/Create
         public ActionResult Create()
-        {
-            ViewBag.cod_libro = new SelectList(db.Libroes.Where(l => l.Stock > 0), "cod_libro", "Nombre");
+        {   
+            //0 significa que el libro es de tipo Normal por lo tanto se puede prestar
+            //1 significa que el libro es de tipo reserva por lo tanto no se puede prestar porque debe reposar siempre dentro de la Biblioteca         
+            ViewBag.cod_libro = new SelectList(db.Libroes.Where(l => l.Stock > 0 && l.Tipo == 0), "cod_libro", "Nombre");
             ViewBag.cod_usuario = new SelectList(db.Usuarios.Where(u => u.estado == EstadoUsuario.Activo), "cod_usuario", "NombreCompleto");
             return View();
         }

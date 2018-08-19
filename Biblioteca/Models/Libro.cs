@@ -19,6 +19,8 @@ namespace Biblioteca.Models
         public string Autor { get; set; }
         public string Ubicacion { get; set; }
         public string Editorial { get; set; }
+
+        public string Area { get; set; }
         public int Año { get; set; }
         public TipoUsuario? Tipo { get; set; }
         public int Stock { get; set; }
