@@ -24,7 +24,9 @@ namespace Biblioteca.Controllers
             }
             if (!string.IsNullOrEmpty(tipo))
             {
-                libros = libros.Where(s => s.Nombre.Contains(tipo));
+                var tipoI = (Int32.Parse(tipo));
+
+                libros = libros.Where(s => ((int) s.Tipo) == tipoI);
             }
             if (!string.IsNullOrEmpty(area))
             {
@@ -32,7 +34,7 @@ namespace Biblioteca.Controllers
             }
             if (!string.IsNullOrEmpty(autor))
             {
-                libros = libros.Where(s => s.Nombre.Contains(autor));
+                libros = libros.Where(s => s.Autor.Contains(autor));
             }
             return View(libros);
         }
