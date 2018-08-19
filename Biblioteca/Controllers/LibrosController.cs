@@ -17,29 +17,7 @@ namespace Biblioteca.Controllers
         // GET: Libros
         public ActionResult Index(String busquedalibros, string tipo, string area, string autor)
         {
-
             ReferenciaServicio.ServicioBibliotecaSoapClient servicio = new ReferenciaServicio.ServicioBibliotecaSoapClient();
-
-
-            /* var libros = from m in db.Libros select m;
-             if (!string.IsNullOrEmpty(busquedalibros))
-             {
-                 libros = libros.Where(s => s.Nombre.Contains(busquedalibros));
-             }
-             if (!string.IsNullOrEmpty(tipo))
-             {
-                 var tipoI = (Int32.Parse(tipo));
-
-                 libros = libros.Where(s => ((int) s.Tipo) == tipoI);
-             }
-             if (!string.IsNullOrEmpty(area))
-             {
-                 libros = libros.Where(s => s.Area.Contains(area));
-             }
-             if (!string.IsNullOrEmpty(autor))
-             {
-                 libros = libros.Where(s => s.Autor.Contains(autor));
-             }*/
 
             return View(servicio.buscarLibros(busquedalibros, tipo, area, autor));
         }

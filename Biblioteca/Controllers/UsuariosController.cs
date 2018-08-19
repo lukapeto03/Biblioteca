@@ -55,7 +55,7 @@ namespace Biblioteca.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cod_usuario,Cedula,NombreCompleto,Direccion,Email,Telefono,TipoUsuario")] Usuario usuario)
+        public ActionResult Create([Bind(Include = "cod_usuario,Cedula,NombreCompleto,Direccion,Email,Telefono,Tipo")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
