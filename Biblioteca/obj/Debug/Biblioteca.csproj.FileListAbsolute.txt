@@ -83,8 +83,8 @@ C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\bi
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Migrations.fechaDevolucionVacia.resources
 C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+C:\Users\c3733615\Documents\Visual Studio 2015\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache

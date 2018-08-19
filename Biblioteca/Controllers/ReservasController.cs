@@ -65,7 +65,12 @@ namespace Biblioteca.Controllers
             {
                 return HttpNotFound();
             }
-
+            
+                Libro libro = db.Libroes.Find(reserva.cod_libro);
+               
+                libro.Stock = libro.Stock + 1;
+                db.SaveChanges();
+                         
             reserva.FechaDevolucion = DateTime.Today;
             db.SaveChanges();
 
@@ -79,7 +84,15 @@ namespace Biblioteca.Controllers
         {
             if (ModelState.IsValid)
             {
+                Libro libro = db.Libroes.Find(reserva.cod_libro);
+                if ( libro == null || libro.Stock < 1)
+                {
+                    return RedirectToAction("Create", new { mensaje = "El libro no tiene stock" });
+                }
+                    
                 db.Reservas.Add(reserva);
+                db.SaveChanges();
+                libro.Stock = libro.Stock - 1;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

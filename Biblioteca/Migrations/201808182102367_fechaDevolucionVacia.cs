@@ -8,7 +8,7 @@ namespace Biblioteca.Migrations
         public override void Up()
         {
            
-            CreateTable(
+            /*CreateTable(
                 "dbo.Reservas",
                 c => new
                     {
@@ -24,7 +24,7 @@ namespace Biblioteca.Migrations
                 .ForeignKey("dbo.Usuarios", t => t.cod_usuario, cascadeDelete: true)
                 .Index(t => t.cod_libro)
                 .Index(t => t.cod_usuario);
-            
+            */
         }
         
         public override void Down()
