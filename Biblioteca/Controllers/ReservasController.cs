@@ -65,16 +65,32 @@ namespace Biblioteca.Controllers
             {
                 return HttpNotFound();
             }
-            
-                Libro libro = db.Libroes.Find(reserva.cod_libro);
-               
-                libro.Stock = libro.Stock + 1;
-                db.SaveChanges();
-                         
+
+            String mensaje = "La devolución se ha registrado exitosamente";
+
+            Libro libro = db.Libroes.Find(reserva.cod_libro);
+
+            libro.Stock = libro.Stock + 1;
+            db.SaveChanges();
+
             reserva.FechaDevolucion = DateTime.Today;
             db.SaveChanges();
 
-            return RedirectToAction("Index");
+            // Tomar fecha de la reserva y sumarle los días de prestamo
+            // Restar la fecha de reserva + los días a la fecha y hora actual
+            // si la fecha y hora es mayor que la máxima de entrega entonces 
+            // Obtenga el usuario y coloquelo inactivo
+            // Genere el mensaje de que el usuario está inactivo
+
+            if (DateTime.Today > (reserva.FechaReserva.AddDays(reserva.DiasPrestamo)) )
+            {
+                Usuario usuario = db.Usuarios.Find(reserva.cod_usuario);
+                usuario.estado = EstadoUsuario.Inactivo;
+                mensaje = "El usuario ha quedado en estado inactivo";
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", new { mensaje = mensaje });
         }
 
 

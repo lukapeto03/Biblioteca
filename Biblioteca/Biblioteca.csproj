@@ -185,6 +185,18 @@
     <Compile Include="Migrations\201808190246563_tipoUsuario.Designer.cs">
       <DependentUpon>201808190246563_tipoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808190418589_estadoUsuario.cs" />
+    <Compile Include="Migrations\201808190418589_estadoUsuario.Designer.cs">
+      <DependentUpon>201808190418589_estadoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190424328_defaultEstado.cs" />
+    <Compile Include="Migrations\201808190424328_defaultEstado.Designer.cs">
+      <DependentUpon>201808190424328_defaultEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190451406_estadoNotNull.cs" />
+    <Compile Include="Migrations\201808190451406_estadoNotNull.Designer.cs">
+      <DependentUpon>201808190451406_estadoNotNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -289,6 +301,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808190246563_tipoUsuario.resx">
       <DependentUpon>201808190246563_tipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190418589_estadoUsuario.resx">
+      <DependentUpon>201808190418589_estadoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190424328_defaultEstado.resx">
+      <DependentUpon>201808190424328_defaultEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190451406_estadoNotNull.resx">
+      <DependentUpon>201808190451406_estadoNotNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
