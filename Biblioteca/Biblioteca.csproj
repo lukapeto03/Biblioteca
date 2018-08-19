@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201808182102367_fechaDevolucionVacia.Designer.cs">
       <DependentUpon>201808182102367_fechaDevolucionVacia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808190246563_tipoUsuario.cs" />
+    <Compile Include="Migrations\201808190246563_tipoUsuario.Designer.cs">
+      <DependentUpon>201808190246563_tipoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -282,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808182102367_fechaDevolucionVacia.resx">
       <DependentUpon>201808182102367_fechaDevolucionVacia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190246563_tipoUsuario.resx">
+      <DependentUpon>201808190246563_tipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

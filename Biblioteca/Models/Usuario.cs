@@ -7,6 +7,11 @@ using System.Web;
 
 namespace Biblioteca.Models
 {
+    public enum Tipo
+    {
+        Estudiante, Egresado, Docente, Funcionario
+    }
+
     public class Usuario
     {
         [Key]
@@ -16,7 +21,7 @@ namespace Biblioteca.Models
         public string Direccion { get; set; }
         public string Email { get; set; }
         public int Telefono { get; set; }
-        public string TipoUsuario { get; set; }
+        public Tipo? tipo { get; set; }
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
     public class UsuarioDBContext : DbContext

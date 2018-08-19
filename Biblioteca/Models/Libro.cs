@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Biblioteca.Models
 {
-    public enum Tipo
+    public enum TipoUsuario
     {
         Normal, Reserva
     }
@@ -20,7 +20,7 @@ namespace Biblioteca.Models
         public string Ubicacion { get; set; }
         public string Editorial { get; set; }
         public int Año { get; set; }
-        public Tipo? Tipo { get; set; }
+        public TipoUsuario? Tipo { get; set; }
         public int Stock { get; set; }
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
